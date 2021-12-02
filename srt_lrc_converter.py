@@ -18,7 +18,7 @@ elements=re.findall(pattern,srtstr)
 
 lcrstr=''
 for i in elements:
-    lcrstr=lcrstr+'['+i[2]+i[3]+'.'+i[4][0:2]+']'+i[6]+'\n'
+    lcrstr=lcrstr+'['+'%.2d'%(60*int(i[2][0:2])+int(i[2][3:5]))+':'+i[3]+'.'+i[4][0:2]+']'+i[6]+'\n'
 
 outpath=argv[1].replace('srt','lrc')
 lcrfile=open(outpath,'w')
